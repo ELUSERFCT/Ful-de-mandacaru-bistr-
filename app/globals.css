@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-nunito);
+  --font-serif: var(--font-playfair);
+}
+
+:root {
+  /* Warm sertão palette */
+  --background: #fbf6ee;
+  --foreground: #2a1e16;
+  --card: #ffffff;
+  --card-foreground: #2a1e16;
+  --primary: #b8451f; /* terracota */
+  --primary-foreground: #fbf6ee;
+  --secondary: #2f5d3a; /* verde mandacaru */
+  --secondary-foreground: #fbf6ee;
+  --accent: #d99a2b; /* mostarda/dourado */
+  --accent-foreground: #2a1e16;
+  --muted: #efe4d4;
+  --muted-foreground: #7a6a5c;
+  --border: #e5d7c4;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif), ui-serif, Georgia, serif;
+  }
+}
